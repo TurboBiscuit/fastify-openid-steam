@@ -1,5 +1,9 @@
+import NOSID from "node-steam-openid";
 declare module "fastify" {
   interface FastifyInstance {
-    steam: import("node-steam-openid");
+    steam: NOSID;
   }
 }
+
+declare const fastifyNOSID: FastifyPlugin;
+export default fastifyNOSID;
